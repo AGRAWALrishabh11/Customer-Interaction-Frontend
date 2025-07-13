@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forgot Password</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-indigo-100 via-white to-blue-100 flex items-center justify-center px-4">
+  <form id="forgotForm" class="bg-white p-10 rounded-3xl shadow-2xl w-full max-w-md space-y-6">
+    <h2 class="text-3xl font-bold text-center text-blue-600">Reset Your Password</h2>
+    <p class="text-center text-gray-500 text-sm">Please enter your registered email and phone number</p>
+
+    <input type="email" name="email" placeholder="Email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300" />
+    <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300" />
+    <input type="password" name="newPassword" placeholder="New Password" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300" />
+    <input type="password" name="confirmPassword" placeholder="Confirm Password" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300" />
+
+    <button type="submit" class="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold text-lg">Reset Password</button>
+
+    <p class="text-center text-sm text-gray-500">Go back to <a href="login.html" class="text-blue-600 hover:underline">Login</a></p>
+  </form>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

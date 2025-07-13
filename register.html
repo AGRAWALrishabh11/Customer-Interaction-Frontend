@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-green-100 via-white to-blue-100 flex items-center justify-center px-4">
+  <form id="registerForm" class="bg-white p-10 rounded-3xl shadow-2xl w-full max-w-lg space-y-6">
+    <h2 class="text-3xl font-bold text-center text-green-600">Create Your Account</h2>
+    <p class="text-center text-gray-500 text-sm">Fill in the details to register</p>
+
+    <div class="grid grid-cols-1 gap-4">
+      <div class="flex flex-col md:flex-row gap-4">
+        <input type="text" name="fullName" placeholder="Full Name" required class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-300" />
+        <input type="number" name="age" placeholder="Age" required class="w-32 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-300" />
+      </div>
+
+      <input type="email" name="email" placeholder="Email" required class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-300" />
+      <input type="tel" name="phone" placeholder="Phone Number" required class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-300" />
+
+      <div class="flex flex-col md:flex-row gap-4">
+        <input type="password" name="password" placeholder="Password" required class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-300" />
+        <input type="password" name="confirm" placeholder="Confirm Password" required class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-300" />
+      </div>
+    </div>
+
+    <select name="role" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-300">
+      <option value="">Select Role</option>
+      <option value="admin">Admin</option>
+      <option value="customer">Customer</option>
+    </select>
+
+    <button type="submit" class="w-full py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-semibold text-lg">Register</button>
+
+    <p class="text-center text-sm text-gray-500">Already have an account? <a href="login.html" class="text-blue-600 hover:underline">Login here</a></p>
+  </form>
+  <script src="js/main.js"></script>
+</body>
+</html>

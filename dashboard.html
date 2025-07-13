@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-100 via-white to-green-100 flex items-center justify-center px-4 relative">
+  <form id="customerForm" class="bg-white p-10 rounded-3xl shadow-2xl w-full max-w-2xl space-y-6">
+    <h2 class="text-3xl font-bold text-center text-blue-600">Enter Customer Details</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <input type="text" name="firstName" placeholder="First Name" required class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300" />
+      <input type="text" name="lastName" placeholder="Last Name" required class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300" />
+      <input type="email" name="email" placeholder="Email Address" required class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300" />
+      <input type="text" name="company" placeholder="Company Name" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300" />
+      <input type="tel" name="mobile" placeholder="Mobile Number" required class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300" />
+      <input type="tel" name="whatsapp" placeholder="WhatsApp Number" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300" />
+    </div>
+
+    <div class="flex flex-col">
+      <label class="font-medium mb-2 text-gray-700">Product Interested:</label>
+      <div class="flex flex-wrap gap-4">
+        <label class="inline-flex items-center"><input type="checkbox" name="products" value="PBX" class="form-checkbox h-5 w-5 text-blue-600" /><span class="ml-2">PBX</span></label>
+        <label class="inline-flex items-center"><input type="checkbox" name="products" value="Contact Center" class="form-checkbox h-5 w-5 text-blue-600" /><span class="ml-2">Contact Center</span></label>
+        <label class="inline-flex items-center"><input type="checkbox" name="products" value="WhatsApp for Messaging" class="form-checkbox h-5 w-5 text-blue-600" /><span class="ml-2">WhatsApp</span></label>
+      </div>
+    </div>
+
+    <button type="submit" class="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold text-lg">Submit</button>
+
+    <div class="text-center">
+      <a href="${API_BASE}/api/customers/download"
+         id="downloadCSV"
+         class="inline-block mt-4 px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+         Download Customer CSV
+      </a>
+    </div>
+  </form>
+
+  <div class="absolute top-5 right-5">
+    <button id="logoutBtn" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition">
+      Logout
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
